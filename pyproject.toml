@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "patient-record-deduplication"
+version = "0.1.0"
+description = "Patient record deduplication and Master Patient Index"
+requires-python = ">=3.13"
+dependencies = [
+    "pandas>=2.2",
+    "rapidfuzz>=3.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
